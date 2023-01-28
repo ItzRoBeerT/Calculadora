@@ -9,79 +9,104 @@
 
         <Grid Grid.Row="0" Grid.Column="0" ColumnSpan="4">
             <VerticalStackLayout VerticalOptions="Center">
-                <Label Text="FORMULA" HorizontalOptions="End" VerticalOptions="Center"/>
-                <Label Text="0" HorizontalOptions="End" VerticalOptions="Center"/>
+                <Label x:Name="lblFormula" Text="{Binding Formula}" HorizontalOptions="End" VerticalOptions="Center" FontSize="Medium" TextColor="Grey"/>
+                <Label x:Name="lblResultado" Text="{Binding Resultado}" HorizontalOptions="End" VerticalOptions="Center" FontSize="Large"/>
             </VerticalStackLayout>
         </Grid>
+        
         <Grid Grid.Row="1" Grid.Column="0">
-            <Button Text="AC" Style="{StaticResource btnYellow}"/>
+            <Button x:Name="btnAC" Text="AC" Style="{StaticResource btnYellow}" 
+                    Command="{Binding ClickCommand}" CommandParameter="{Binding Source={x:Reference btnAC},Path=Text}"/>
+        </Grid>
+      
+        <Grid Grid.Row="1" Grid.Column="1" >
+            <Button x:Name="btnBorrar" Text="⌫" Style="{StaticResource btnYellow}"
+                    Command="{Binding ClickCommand}" CommandParameter="{Binding Source={x:Reference btnBorrar},Path=Text}"/>
         </Grid>
         
-        <Grid Grid.Row="1" Grid.Column="1" >
-            <Button Text="⌫" Style="{StaticResource btnYellow}"/>
-        </Grid>
         <Grid Grid.Row="1" Grid.Column="2">
-            <Button Text="%" Style="{StaticResource btnYellow}"/>
+            <Button x:Name="btnPorcentaje" Text="%" Style="{StaticResource btnYellow}"
+                    Command="{Binding ClickCommand}" CommandParameter="{Binding Source={x:Reference btnPorcentaje},Path=Text}"/>
         </Grid>
+        
         <Grid Grid.Row="1" Grid.Column="3">
-            <Button Text="/" Style="{StaticResource btnRed}"/>
+            <Button x:Name="btnDiv" Text="/" Style="{StaticResource btnRed}"
+                    Command="{Binding ClickCommand}" CommandParameter="{Binding Source={x:Reference btnDiv},Path=Text}"/>
         </Grid>
 
         <Grid Grid.Row="2" Grid.Column="0">
-            <Button Text="7" Style="{StaticResource BaseButton}" />
+            <Button x:Name="btn7" Text="7" Style="{StaticResource BaseButton}" 
+                    Command="{Binding ClickCommand}" CommandParameter="{Binding Source={x:Reference btn7},Path=Text}"/>
         </Grid>
+        
         <Grid Grid.Row="2" Grid.Column="1" >
-            <Button Text="8"  Style="{StaticResource BaseButton}"/>
+            <Button x:Name="btn8" Text="8"  Style="{StaticResource BaseButton}"
+                    Command="{Binding ClickCommand}" CommandParameter="{Binding Source={x:Reference btn8},Path=Text}"/>
         </Grid>
         
         <Grid Grid.Row="2" Grid.Column="2">
-            <Button Text="9"  Style="{StaticResource BaseButton}"/>
+            <Button x:Name="btn9" Text="9"  Style="{StaticResource BaseButton}"
+                    Command="{Binding ClickCommand}" CommandParameter="{Binding Source={x:Reference btn9},Path=Text}"/>
         </Grid>
         
         <Grid Grid.Row="2" Grid.Column="3">
-            <Button Text="*" Style="{StaticResource btnRed}"/>
+            <Button x:Name="btnMult" Text="*" Style="{StaticResource btnRed}"
+                    Command="{Binding ClickCommand}" CommandParameter="{Binding Source={x:Reference btnMult},Path=Text}"/>
         </Grid>
         
         <Grid Grid.Row="3" Grid.Column="0">
-            <Button Text="4"  Style="{StaticResource BaseButton}"/>
+            <Button x:Name="btn4" Text="4"  Style="{StaticResource BaseButton}"
+                    Command="{Binding ClickCommand}" CommandParameter="{Binding Source={x:Reference btn4},Path=Text}"/>
         </Grid>
         
         <Grid Grid.Row="3" Grid.Column="1" >
-            <Button Text="5"  Style="{StaticResource BaseButton}"/>
+            <Button x:Name="btn5" Text="5"  Style="{StaticResource BaseButton}"
+                    Command="{Binding ClickCommand}" CommandParameter="{Binding Source={x:Reference btn5},Path=Text}"/>
         </Grid>
         
         <Grid Grid.Row="3" Grid.Column="2">
-            <Button Text="6"  Style="{StaticResource BaseButton}"/>
+            <Button x:Name="btn6" Text="6"  Style="{StaticResource BaseButton}"
+                    Command="{Binding ClickCommand}" CommandParameter="{Binding Source={x:Reference btn6},Path=Text}"/>
         </Grid>
         
         <Grid Grid.Row="3" Grid.Column="3">
-            <Button Text="-" Style="{StaticResource btnRed}"/>
+            <Button x:Name="btnRest" Text="-" Style="{StaticResource btnRed}"
+                    Command="{Binding ClickCommand}" CommandParameter="{Binding Source={x:Reference btnRest},Path=Text}"/>
         </Grid>
         
         <Grid Grid.Row="4" Grid.Column="0">
-            <Button Text="1"  Style="{StaticResource BaseButton}"/>
+            <Button x:Name="btn1" Text="1"  Style="{StaticResource BaseButton}"
+                    Command="{Binding ClickCommand}" CommandParameter="{Binding Source={x:Reference btn1},Path=Text}"/>
         </Grid>
         
         <Grid Grid.Row="4" Grid.Column="1">
-            <Button Text="2"  Style="{StaticResource BaseButton}"/>
+            <Button x:Name="btn2" Text="2"  Style="{StaticResource BaseButton}"
+                    Command="{Binding ClickCommand}" CommandParameter="{Binding Source={x:Reference btn2},Path=Text}"/>
         </Grid>
         
         <Grid Grid.Row="4" Grid.Column="2">
-            <Button Text="3"  Style="{StaticResource BaseButton}"/>
+            <Button x:Name="btn3" Text="3"  Style="{StaticResource BaseButton}"
+                    Command="{Binding ClickCommand}" CommandParameter="{Binding Source={x:Reference btn3},Path=Text}"/>
         </Grid>
+        
         <Grid Grid.Row="4" Grid.Column="3">
-            <Button Text="+" Style="{StaticResource btnRed}"/>
+            <Button x:Name="btnSum" Text="+" Style="{StaticResource btnRed}"
+                    Command="{Binding ClickCommand}" CommandParameter="{Binding Source={x:Reference btnSum},Path=Text}"/>
         </Grid>
         
         <Grid Grid.Row="5" Grid.Column="0" ColumnSpan="2">
-            <Button Text="0"  Style="{StaticResource BaseButton}"/>
+            <Button x:Name="btn0" Text="0"  Style="{StaticResource BaseButton}"
+                    Command="{Binding ClickCommand}" CommandParameter="{Binding Source={x:Reference btn0},Path=Text}"/>
         </Grid>
+        
         <Grid Grid.Row="5" Grid.Column="2">
-            <Button Text="."  Style="{StaticResource BaseButton}"/>
+            <Button x:Name="btnPoint" Text="."  Style="{StaticResource BaseButton}"
+                    Command="{Binding ClickCommand}" CommandParameter="{Binding Source={x:Reference btnPoint},Path=Text}"/>
         </Grid>
         
         <Grid Grid.Row="5" Grid.Column="3">
-            <Button Text="=" Style="{StaticResource btnRed}"/>
+            <Button x:Name="btnResolve" Text="=" Style="{StaticResource btnRed}"
+                    Command="{Binding ClickCommand}" CommandParameter="{Binding Source={x:Reference btnResolve},Path=Text}"/>
         </Grid>
     </Grid>
 
