@@ -5,81 +5,83 @@
              x:Class="Calculadora.MainPage">
 
 
-    <Grid RowDefinitions=".4*,.1*,.1*,.1*,.1*,.1*" ColumnDefinitions="*,*,*,*">
+    <Grid RowDefinitions=".4*,.1*,.1*,.1*,.1*,.1*" ColumnDefinitions="*,*,*,*" Style="{StaticResource miGrid}">
 
         <Grid Grid.Row="0" Grid.Column="0" ColumnSpan="4">
-            <Label Text="numeritos" HorizontalOptions="End" VerticalOptions="Center"/>
+            <VerticalStackLayout VerticalOptions="Center">
+                <Label Text="FORMULA" HorizontalOptions="End" VerticalOptions="Center"/>
+                <Label Text="0" HorizontalOptions="End" VerticalOptions="Center"/>
+            </VerticalStackLayout>
         </Grid>
-        
         <Grid Grid.Row="1" Grid.Column="0">
             <Button Text="AC" Style="{StaticResource btnYellow}"/>
         </Grid>
         
         <Grid Grid.Row="1" Grid.Column="1" >
-            <Button Text="⌫"/>
+            <Button Text="⌫" Style="{StaticResource btnYellow}"/>
         </Grid>
         <Grid Grid.Row="1" Grid.Column="2">
-            <Button Text="%"/>
+            <Button Text="%" Style="{StaticResource btnYellow}"/>
         </Grid>
         <Grid Grid.Row="1" Grid.Column="3">
-            <Button Text="/"/>
+            <Button Text="/" Style="{StaticResource btnRed}"/>
         </Grid>
 
         <Grid Grid.Row="2" Grid.Column="0">
-            <Button Text="7"  />
+            <Button Text="7" Style="{StaticResource BaseButton}" />
         </Grid>
         <Grid Grid.Row="2" Grid.Column="1" >
-            <Button Text="8"/>
+            <Button Text="8"  Style="{StaticResource BaseButton}"/>
         </Grid>
         
         <Grid Grid.Row="2" Grid.Column="2">
-            <Button Text="9"/>
+            <Button Text="9"  Style="{StaticResource BaseButton}"/>
         </Grid>
         
         <Grid Grid.Row="2" Grid.Column="3">
-            <Button Text="*"/>
+            <Button Text="*" Style="{StaticResource btnRed}"/>
         </Grid>
         
         <Grid Grid.Row="3" Grid.Column="0">
-            <Button Text="4"/>
+            <Button Text="4"  Style="{StaticResource BaseButton}"/>
         </Grid>
         
         <Grid Grid.Row="3" Grid.Column="1" >
-            <Button Text="5"/>
+            <Button Text="5"  Style="{StaticResource BaseButton}"/>
         </Grid>
         
         <Grid Grid.Row="3" Grid.Column="2">
-            <Button Text="6"/>
+            <Button Text="6"  Style="{StaticResource BaseButton}"/>
         </Grid>
         
         <Grid Grid.Row="3" Grid.Column="3">
-            <Button Text="-"/>
+            <Button Text="-" Style="{StaticResource btnRed}"/>
         </Grid>
         
         <Grid Grid.Row="4" Grid.Column="0">
-            <Button Text="1"/>
+            <Button Text="1"  Style="{StaticResource BaseButton}"/>
         </Grid>
         
         <Grid Grid.Row="4" Grid.Column="1">
-            <Button Text="2"/>
+            <Button Text="2"  Style="{StaticResource BaseButton}"/>
         </Grid>
         
         <Grid Grid.Row="4" Grid.Column="2">
-            <Button Text="3"/>
+            <Button Text="3"  Style="{StaticResource BaseButton}"/>
         </Grid>
         <Grid Grid.Row="4" Grid.Column="3">
-            <Button Text="+"/>
+            <Button Text="+" Style="{StaticResource btnRed}"/>
         </Grid>
         
         <Grid Grid.Row="5" Grid.Column="0" ColumnSpan="2">
-            <Button Text="0"/>
+            <Button Text="0"  Style="{StaticResource BaseButton}"/>
         </Grid>
         <Grid Grid.Row="5" Grid.Column="2">
-            <Button Text="."/>
+            <Button Text="."  Style="{StaticResource BaseButton}"/>
         </Grid>
         
         <Grid Grid.Row="5" Grid.Column="3">
-            <Button Text="="/>
+            <Button Text="=" Style="{StaticResource btnRed}"/>
         </Grid>
     </Grid>
 

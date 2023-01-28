@@ -1,15 +1,22 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <?xaml -comp compile=true?>
 <ResourceDictionary xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Calculadora.Resources.Styles.Estilos">
- 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+
+    <Style TargetType="Grid" x:Key="miGrid">
+        <Setter Property="ColumnSpacing" Value="5"/>
+        <Setter Property="RowSpacing" Value="5"/>
+    </Style>
     <Style TargetType="Button" x:Key="BaseButton">
         <Setter Property="BackgroundColor" Value="{AppThemeBinding Dark={StaticResource Black}, Light={StaticResource White}}"/>
+        <Setter Property="TextColor" Value="{AppThemeBinding Dark={StaticResource White}, Light={StaticResource Black}}"/>
+        <Setter Property="CornerRadius" Value="0"/>
     </Style>
-    
-    <Style TargetType="Button" x:Key="btnYellow" BasedOn="{StaticResource BaseButton}">
-        <Setter Property="TextColor" Value="Yellow"/>
+    <Style  x:Key="btnYellow" TargetType="Button" BasedOn="{StaticResource BaseButton}">
+        <Setter Property="TextColor" Value="#b1813c"/>
+    </Style>
+    <Style  x:Key="btnRed" TargetType="Button" BasedOn="{StaticResource BaseButton}">
+        <Setter Property="TextColor" Value="#b25755"/>
     </Style>
     
     <Style TargetType="Button" x:Key="btnDarkMode">
